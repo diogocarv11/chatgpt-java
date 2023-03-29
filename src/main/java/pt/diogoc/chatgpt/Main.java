@@ -8,7 +8,7 @@ import pt.diogoc.chatgpt.model.request.*;
 public class Main {
 
 	public static void main(String[] args) {
-		//
+		
 		OpenAIRequest req = new OpenAIRequest();
 		req.setModel("text-davinci-003");
 		req.setPrompt("You are and AI\nAI:");
