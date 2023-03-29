@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FileUtils {
 	
-	public List<String> readLines(String filePath) throws IOException{
+	public static List<String> readLines(String filePath) throws IOException{
 		List<String> result = new ArrayList<>();
 		
 		BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -28,9 +28,7 @@ public class FileUtils {
 			// libertar memoria
 			reader.close();
 		}
-		
-		
-		
+	
 		return result;
 	}
 }
