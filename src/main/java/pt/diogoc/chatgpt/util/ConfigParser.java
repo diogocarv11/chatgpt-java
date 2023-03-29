@@ -17,8 +17,15 @@ public class ConfigParser {
 		
 		for (int i = 0; i < lines.size(); i++) {
 			String line = lines.get(i); //equivalente a lines[i] num array
-			String[] keyValue = line.split("=");
-			result.put(keyValue[0], keyValue[1]);
+			
+			int splitPosition = line.indexOf("=");
+			
+			// key sera tudo o que esta a esquerda do primeiro "=" (splitPosition)
+			String key = line.substring(0, splitPosition);
+			// key sera tudo o que esta a direita do primeiro "=" (splitPosition)
+			String value = line.substring(splitPosition + 1);
+			
+			result.put(key, value);
 		}
 		
 		

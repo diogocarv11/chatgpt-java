@@ -23,8 +23,7 @@ public class FileUtils {
 		} catch (IOException e) {
 			//catch e opcional neste caso
 			throw e;
-		} finally {
-			//sempre executado
+		} finally /*sempre executado, quer haja erros ou nao */{
 			// libertar memoria
 			reader.close();
 		}
